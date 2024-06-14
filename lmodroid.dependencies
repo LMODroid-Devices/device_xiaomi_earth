@@ -1,17 +1,20 @@
 [
   {
-    "repository": "android_device_mediatek_sepolicy_vndr",
+    "repository": "LMODroid/platform_device_mediatek_sepolicy_vndr",
     "target_path": "device/mediatek/sepolicy_vndr"
   },
   {
+    "remote": "lineage",
     "repository": "android_hardware_mediatek",
     "target_path": "hardware/mediatek"
   },
   {
+    "remote": "lineage",
     "repository": "android_hardware_xiaomi",
     "target_path": "hardware/xiaomi"
   },
   {
+    "remote": "lineage",
     "repository": "android_kernel_xiaomi_earth",
     "target_path": "kernel/xiaomi/earth"
   }

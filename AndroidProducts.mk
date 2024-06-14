@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_earth.mk
+    $(LOCAL_DIR)/lmodroid_earth.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_earth-user \
-    lineage_earth-userdebug \
-    lineage_earth-eng
+    lmodroid_earth-user \
+    lmodroid_earth-userdebug \
+    lmodroid_earth-eng
