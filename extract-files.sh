@@ -62,6 +62,9 @@ function blob_fixup {
         system_ext/lib64/libsink.so)
             "${PATCHELF}" --add-needed "libshim_sink.so" "$2"
             ;;
+        system_ext/lib64/libsource.so)
+            grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek)
             ;&
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
@@ -88,8 +91,9 @@ function blob_fixup {
             # evaluateCaptureConfiguration()
             sed -i "s/\x34\xE8\x87\x40\xB9/\x34\x28\x02\x80\x52/" "$2"
             ;;
-        vendor/lib*/libmtkcam_stdutils.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+        vendor/lib*/libmtkcam_stdutils.so|\
+        vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
     esac
 }

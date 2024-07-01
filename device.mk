@@ -68,6 +68,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libbluetooth_audio_session \
+    libunwindstack.vendor \
     libalsautils \
     libnbaio_mono \
     libtinycompress \
@@ -91,6 +92,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor \
     libcamera2ndk_vendor
 
+PRODUCT_PACKAGES += \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libpng.vendor
+
 # Cgroup
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
@@ -105,6 +111,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0.vendor \
     libdrm.vendor \
     libutils-v32
+
+PRODUCT_PACKAGES += \
+    libutilscallstack.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -149,6 +158,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss-V1-ndk.vendor
 
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libexpat.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -173,6 +186,7 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-common
 
 PRODUCT_PACKAGES += \
+    libui_shim \
     libshim_sink
 
 PRODUCT_COPY_FILES += \
