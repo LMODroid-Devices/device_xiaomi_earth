@@ -95,6 +95,9 @@ function blob_fixup {
         vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+        vendor/lib64/sensors.camera.light.so)
+            "$PATCHELF" --replace-needed "libcamera2ndk_vendor.so" "libcamera2ndk_vendor-v35.so" "$2"
+            ;;
     esac
 }
 

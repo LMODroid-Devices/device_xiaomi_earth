@@ -513,6 +513,9 @@ vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
+# Camera - from AP1A.240405.002.A1
+vendor/lib64/libcamera2ndk_vendor.so:vendor/lib64/libcamera2ndk_vendor-v35.so|6b8dc8e42d07d643c03fed98092df3984daeaaa7
+
 # Camera Configs
 vendor/etc/camera/768_seg_without_det_with_softmax.mnn.tempcache
 vendor/etc/camera/aivsModels1
